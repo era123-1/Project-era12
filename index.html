@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+    <link rel="stylesheet" href="styles.css">
+   
+</head>
+
+<body>
+    
+  <div class="top-bar">
+    
+        <img src="logo.jpg" alt="Logo" class="logo">
+        <h1>First Aid Application</h1>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search Video...">
+            <button onclick="searchFunction()">
+                Search
+            </button>
+        </div> 
+    </div>
+
+        <div class="main-content"> 
+            <div class="wrapper">
+            <div class="emergency-buttons">
+                <button onclick="showInstructions('infract')">Infract</button>
+                <button onclick="showInstructions('breach')">Breach</button>
+                <button onclick="showInstructions('wound')">Wound</button>
+                <button onclick="showInstructions('hypoglycemia')">Hypoglycemia</button>
+                <button onclick="showInstructions('accidents')">Accidents</button>
+                <button onclick="showInstructions('drowing')">Drowing</button>
+                <button onclick="showInstructions('insects')">Insects</button>
+                <button onclick="showInstructions('fire')">Fire</button>
+                <!-- We add buttons for other cases-->
+                <button onclick="showInstructions('earthquake')">Earthquake</button>
+                <button onclick="showInstructions('poisoning')">Poisoning</button>
+                <button onclick="showInstructions('electric-shock')">Electric Shock</button>
+                <button onclick="showInstructions('heat-stroke')">Heat Stroke</button>
+                <button onclick="showInstructions('snake-bite')">Snake Bite</button>
+    <!-- and others... -->
+            </div>
+            <div class="emergency-images-container">   
+  <table class="emergency-images-grid">
+    <tr>
+        <td><img src="fa.jpg"  alt="First Aid Instructions"></td>
+        <td><img src="fb.jpg"  alt="First Aid Instructions"></td>
+        <td><img src="fc.jpg"  alt="First Aid Instructions"></td>
+        <td><img src="fd.jpg"   alt="First Aid Instructions"></td>
+
+    </tr>
+</table>
+  </div>
+            
+            <div class="instructions" id="instructions"></div>
+        </div>
+        </div>
+        <div class="container">
+            <h2 id="mapToggle">The nearest hospital Map</h2>
+            <iframe  id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2995.5526763569583!2d19.83199567526826!3d41.34033949891338!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x135031423703601d%3A0x4b07122dcf9c14af!2sMother%20Teresa%20Hospital!5e0!3m2!1sen!2s!4v1699520036141!5m2!1sen!2s" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+           </div>
+        
+
+        <footer>
+            <div class="emergency-contact-footer">
+                <div class="emergency-item">
+                    <button onclick="callNumber('127')">
+                        <i class="fas fa-truck-medical"></i> AMBULANCE: 127
+                    </button>
+                   
+                </div>
+                <div class="emergency-item">
+                    <button onclick="callNumber('128')">
+                         <i class="fas fa-fire"></i> FIREWORK: 128
+                         </button>
+                    
+                </div>
+                <div class="emergency-item">
+                    <button onclick="callNumber('129')">
+                         <i class="fas fa-shield-alt"></i> POLICE: 129
+                         </button>
+                    
+                </div>
+            </div>
+
+            
+      
+        <div class="social-share">
+            <h2>Share on Social Media</h2>
+            <div class="social-icons">
+                <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="camera-section">
+            <h2>Take a Photo</h2>
+            <input type="file" accept="image/*" capture="camera" id="cameraInput" onchange="handleFileSelect()">
+            <img id="selectedImage" alt="Selected Image">
+        </div>
+    </footer>
+</body>
+<script src="script.js"></script>
+</html>
+
+
